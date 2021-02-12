@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component';
 import { TopNavComponent } from './components/shared/top-nav/top-nav.component';
 import { ContentComponent } from './components/shared/content/content.component';
+import { CommunityComponent } from './components/pages/community/community.component';
+import { PostQuestionComponent } from './components/pages/community/post-question/post-question.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     TopNavComponent,
-    ContentComponent
+    ContentComponent,
+    CommunityComponent,
+    PostQuestionComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

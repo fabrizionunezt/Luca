@@ -24,6 +24,10 @@ $breakpoint-lg: 1360px;
   }
 }
 
+@font-face{
+  font-family: Poppins;
+  src: url(assets/fonts/Poppins-Regular.ttf) format('truetype');
+}
 body {
   margin: 0 0 0 20%;
   @include media(xs) {
@@ -76,10 +80,25 @@ body {
 }
 
 .nav-link {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  color: #9A9CB5;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0.6rem 0 0.6rem 0.8rem;
+  padding: 0 0.8rem 0 0.8rem;
+  display: flex;
+  align-items: center; /*horizontal align*/
+  &.active{
+    color: #3843D0;
+    background-color: #EDEEFF;
+    border-radius: 1rem;
+    width: fit-content;
+  }
   @include media(xs) {
-    display: flex;
     flex-direction: column;
-    align-items: center; /*horizontal align*/
     justify-content: center; /*vertical align*/
     flex-grow: 1; /*equal space for each link*/
     width: 32px;
@@ -89,17 +108,19 @@ body {
     font-family: sans-serif;
     font-size: 13px;
     color: #444444;
+    background-color: #ffffff !important;
     text-decoration: none;
+    margin: 0;
     -webkit-tap-highlight-color: transparent;
     transition: background-color 0.1s ease-in-out;
-    padding-top: 20px;
+    padding: 20px 0 0 0;
     &.active:before {
       content: "";
       position: absolute;
       top: 0;
       width: 15%;
       border-radius: 1rem;
-      border-top: 4px solid #3843D0;
+      border-top: 4px solid #3843d0;
     }
   }
 }
@@ -107,4 +128,14 @@ body {
   @include media(xs) {
     display: none;
   }
+}
+.container-logo {
+  width: 100%;
+  height: 8.88vh;
+  padding: 18px;
+  box-sizing: border-box;
+  margin-bottom: 1.6rem;
+}
+.nav-text{
+  margin-left: 0.4rem;
 }
