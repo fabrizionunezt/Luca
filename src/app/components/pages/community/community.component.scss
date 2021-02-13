@@ -1,0 +1,22 @@
+@use "src/mixings/_media" as media;
+.floating-btn{
+  display: none;
+  @include media.media(xs){
+    display: block;
+    position: fixed;
+    margin-bottom: 18vh;
+    margin-right: 4%;
+    right: 0;
+    bottom: 0;
+  }
+
+}
+.question-container{
+  padding: 4% 20% 0 20%;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  @include media.media(xs){
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.4rem 0.2rem 0.4rem;
+  }
+}

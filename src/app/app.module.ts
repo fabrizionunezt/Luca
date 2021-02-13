@@ -9,6 +9,8 @@ import { ContentComponent } from './components/shared/content/content.component'
 import { CommunityComponent } from './components/pages/community/community.component';
 import { PostQuestionComponent } from './components/pages/community/post-question/post-question.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MinQuestionComponent } from './components/pages/community/min-question/min-question.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
     ContentComponent,
     CommunityComponent,
     PostQuestionComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MinQuestionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

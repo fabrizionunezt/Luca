@@ -1,0 +1,30 @@
+@use "src/mixings/_media" as media;
+.archivements{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .gray-text-center{
+    padding: 1rem;
+  }
+}
+.user{
+  flex-direction: row-reverse;
+  img{
+    padding-left: 1rem;
+  }
+  .profile{
+    height: 1.9rem;
+    @include media.media(xs){
+      height: 2rem;
+    }
+  }
+}
+.explore {
+  .nav-icon{
+    margin-right: 2rem;
+  }
+}
+.equalsize{
+  min-width: 33%;
+    display: flex;
+}
