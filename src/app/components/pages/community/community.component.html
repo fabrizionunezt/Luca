@@ -1,9 +1,22 @@
 <div class="question-container">
-  
-  <div *ngFor="let number of [0,1,2,3,4,0,1,2,3,4]">
-    <app-min-question></app-min-question>
+  <div class="question-navigator">
+    <div class="title">
+      <h2>Comunidad Luca</h2>
+      <button (click)="newQuestion()" class="new-question noDisplayMobile">NUEVA PREGUNTA</button>
+    </div>
+    <div class="tabs">
+      <a (click)="orderListByCondition('popularity')" [ngClass]="{'tab-button': true, 'active': this.popularity}">Populares</a>
+      <a (click)="orderListByCondition('new')" [ngClass]="{'tab-button': true, 'active': this.new}">Nuevos</a>
+      <a (click)="orderListByCondition('following')" [ngClass]="{'tab-button': true, 'active': this.following}">Seguidos</a>
+    </div>
   </div>
+  <div class="questions-list">
+    <div *ngFor="let question of listQuestions">
+      <app-min-question [questionInt]="question" ></app-min-question>
+    </div>
+  </div>
+
 </div>
 <div class="floating-btn">
-  <img src="assets/images/svg_icons/floating-btn.svg" class="nav-icon profile" alt="Inicio">
+  <img (click)="newQuestion()" src="assets/images/svg_icons/floating-btn.svg" class="nav-icon profile" alt="Inicio">
 </div>

@@ -1,1 +1,20 @@
-<p>post-question works!</p>
+<div class="ask-container">
+  <div class="ask-title">
+    <h2>Haz una pregunta</h2>
+    <button (click)="cancel()" class="new-question noDisplayMobile">CANCELAR</button>
+    <img (click)="cancel()" src="assets/images/svg_icons/close.svg" class="nav-icon noDisplayDesktop" alt="Persona">
+  </div>
+  <div class="ask-body">
+    <div class="title-question">
+      <span>Titulo del publicacion</span>
+      <input type="text" [(ngModel)]="title" #ctrl="ngModel" placeholder="Escribe tu título aquí">
+    </div>
+    <div class="detail-question">
+      <span>Publicacion</span>
+      <textarea name="textarea"  [(ngModel)]="details" #ctrl="ngModel" rows="10" cols="50">Escribe tu publicación aquí</textarea>
+    </div>
+  </div>
+  <div class="ask-footer">
+    <button (click)="saveQuestion()"class="new-question-save">PUBLICAR</button>
+  </div>
+</div>

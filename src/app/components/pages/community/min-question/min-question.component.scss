@@ -19,27 +19,27 @@
       width: auto;
       height: 2.3rem;
     }
-    
-    @include media.media(xs){
-     width: 20%;
-     height: 100%;
-     max-width: 20%; 
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     align-items: center;
-     margin: 0;
-     img {
+
+    @include media.media(xs) {
+      width: 20%;
+      height: 100%;
+      max-width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      img {
         width: auto;
         height: 4rem;
       }
       .value-question {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: flex-end;
-          width: 100%;
-          height: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 30%;
         img {
           width: auto;
           height: 1.5rem;
@@ -56,8 +56,10 @@
     max-width: 75%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-grow: 1;
     .container-remove-overflow {
+      height: 100%;
       .question-label {
         max-height: 80%;
         font-size: 0.66rem;
@@ -69,9 +71,10 @@
         span {
           margin: 0.3rem 0 0 0;
         }
-        @include media.media(xs){
-            height: 50%;
-            max-height: 50%;
+        @include media.media(xs) {
+          height: 50%;
+          max-height: 50%;
+          font-size: 1rem;
         }
       }
       .latest-answer {
@@ -81,14 +84,17 @@
         font-weight: 400;
         span {
           font-size: 0.68rem;
+          @include media.media(xs) {
+            font-size: 0.9rem;
+          }
         }
-        @include media.media(xs){
-            height: 50%;
-            max-height: 50%;
+        @include media.media(xs) {
+          height: 50%;
+          max-height: 50%;
         }
       }
-      @include media.media(xs){
-          height: 100%;
+      @include media.media(xs) {
+        height: 100%;
       }
     }
     .footer-qdescrip {
@@ -112,19 +118,24 @@
           font-weight: 600;
           color: blue;
         }
+        @include media.media(xs) {
+          font-size: 0.8rem;
+          overflow: hidden;
+        }
       }
 
-      @include media.media(xs){
-        .qrelevance-increse{
-            width: 50%;
+      @include media.media(xs) {
+        justify-content: inherit;
+        .qrelevance-increse {
+          width: 30%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          .question-messages {
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
-            .question-messages{
-                display:flex;
-                flex-direction: row;
-                margin-right: 1rem;
-            }
+            margin-right: 1rem;
+          }
         }
       }
     }

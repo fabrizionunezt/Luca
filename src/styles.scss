@@ -73,7 +73,8 @@ body {
     background-color: #edeeff;
   }
   @include media.media(xs){
-    margin-bottom: 15vh;
+    margin-bottom: 2vh;
+    min-height: 75vh;
   }
 }
 
@@ -183,4 +184,10 @@ body {
   --max-lines: 3;
   max-height: calc(var(--lh) * var(--max-lines));
   overflow: hidden;
+}
+.nav-icon{
+  cursor: pointer;
+}
+.fixed-position{
+  position: fixed;
 }

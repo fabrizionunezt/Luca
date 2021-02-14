@@ -12,6 +12,9 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MinQuestionComponent } from './components/pages/community/min-question/min-question.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,9 @@ import { MinQuestionComponent } from './components/pages/community/min-question/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
