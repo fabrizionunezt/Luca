@@ -16,7 +16,7 @@ correr el proyecto con el comando "npm start"
 
 En la raiz del proyecto dejo archivos de los datos de la bd carpeta "DBFILES"
 
-################################################################################################
+#################################################################################
 In order to view the complete project it is necessary to download the "backend", "frontend"
 and have "mongodb" installed
 
